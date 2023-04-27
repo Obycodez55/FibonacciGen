@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FibonacciGennerator</title>
+
+    <!-- Bootstrap CSS & JavaSript-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+      crossorigin="anonymous"
+    />
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Google Font and Effects -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&family=Merriweather:wght@400;700;900&family=Montserrat:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="favicon.jpeg" type="image/x-icon" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="center section">
+      <h1>FibonacciGen</h1>
+      <h3>Math made Easy for ALL!</h3>
+    </div>
+    <div class="explanation section">
+      <h3>The Fibonacci Sequence</h3>
+      <p>The Fibonacci Sequence is the series of numbers:</p>
+      <p class="colored center bold">0, 1, 1, 2, 3, 5, 8, 13, 21, 34, ...</p>
+      <p>The next number is found by adding up the two numbers before it:</p>
+      <ul class="colored">
+        <li>the 2 is found by adding the two numbers before it (1+1),</li>
+        <li>the 3 is found by adding the two numbers before it (1+2),</li>
+        <li>the 5 is (2+3),</li>
+        <li>and so on!</li>
+      </ul>
+
+      <div>
+        Example: the next number in the sequence above is 21+34 = <b>55</b>
+      </div>
+      <p>It is that simple!</p>
+
+      <div class="row">
+        <div class="col-md">
+          <h3>Makes A Spiral</h3>
+
+          <p>When we make squares with those widths, we get a nice spiral:</p>
+
+          <p>
+            Do you see how the squares fit neatly together?<br />
+            For example 5 and 8 make 13, 8 and 13 make 21, and so on.
+          </p>
+        </div>
+        <div class="col-md">
+          <img
+            src="fibonacci-spiral.svg"
+            alt="Fibonacci Spiral"
+            style="max-width: 100%"
+          />
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="section">
+      <div class="colored bold">Generate Fibonacci sequence below!</div>
+      <form action="">
+        <div class="input">
+          <label class="form-label" for="start">Start at:</label>
+          <input class="form-control" type="text" name="" id="start" value="" />
+        </div>
+        <div class="input">
+          <label class="form-label" for="number"
+            >How many numbers should be generated?</label
+          >
+          <input
+            class="form-control"
+            type="text"
+            name=""
+            id="number"
+            value=""
+          />
+        </div>
+        <div  class="input seperator">
+          <label class="form-label" for="seperator">Seperator</label>
+          <select class="form-select" name="seperator" id="seperator">
+            <option value="comma">,</option>
+            <option value="forward-slash">/</option>
+            <option value="period">.</option>
+            <option value="hash">#</option>
+            <option value="exclamation">!</option>
+          </select>
+        </div>
+        <div>
+          <input
+            class="btn btn-lg"
+            type="button"
+            value="Generate!"
+            onClick="fibonacciGenerator()"
+          />
+        </div>
+      </form>
+    </div>
+
+    <div class="section colored" id="output"></div>
+
+    <p id="footer">© Copyright 2023 Obycodes</p>
+    <script src="script.js"></script>
+  </body>
+</html>
